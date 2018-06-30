@@ -1,0 +1,96 @@
+.selling-proposition {
+    padding: 50px 0;
+    h2 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: $theme-blue;
+        padding: 0 5%;
+        span {
+            display: block;
+            font-size: 16px;
+            font-weight: 100;
+            color: $grey;
+        }
+        @include mq(640px) {
+            font-size: 40px;
+        }
+    }
+}
+
+.usp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1180px;
+    margin: 60px auto 0
+}
+
+.usp-offers {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-bottom: 40px;
+    @include mq(1280px) {
+        max-width: 464px;
+    }
+    @include mq(1031px) {
+        max-width: 345px;
+    }
+    @include mq(640px) {
+        width: 100%;
+    }
+}
+
+.usp-img {
+    width: 376px;
+    height: 110px;
+    margin: 15px 20px 0 0;
+    border: 3px solid rgba($grey, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(1280px) {
+        width: 371px;
+        height: 110px;
+    }
+    svg {
+        @include mq(640px) {
+            width: 25px;
+        }
+    }
+    @include mq(1031px) {
+        width: 458px;
+        height: 95px;
+    }
+    @include mq(640px) {
+        width: 301px;
+        height: 70px;
+    }
+    @include mq(356px) {
+        width: 384px;
+        height: 70px;
+    }
+}
+
+.usp-offer {
+    margin-top: 10px;
+    h3 {
+        font-size: 24px;
+        color: $theme-dark-blue;
+        font-weight: normal;
+        @include mq(1280px) {
+            font-size: 20px
+        }
+    }
+    p {
+        color: $theme-dark-blue;
+        font-size: 18px;
+        margin-top: 10px;
+        @include mq(1280px) {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,259 @@
+//Nav on bigger screens
+@include mq-L(751px) {
+    .navigation {
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+    .logo {
+        width: 73px;
+        height: 71px;
+        display: inline-block;
+        margin-right: 35px;
+        img {
+            width: 100%;
+        }
+    }
+    
+    .nav-wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav, .login {
+       display: inline-block;
+       ul {
+           list-style: none;
+       }
+       li {
+           display: inline-block;
+           margin-right: 30px;
+           color: $theme-dark-blue;
+       }
+       a {
+           color: $theme-blue;
+           text-decoration: none;
+           font-size: 22px;
+           cursor: pointer;
+           &:hover {
+            color: $light-blue;
+            }
+       }
+    }
+    
+    .login {
+        margin-left: auto;
+        span {
+            margin-right: 10px;
+        }
+    }
+    
+    .login a {
+        color: $theme-dark-blue;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+//Nav on smalller screens
+@include mq(750px) {
+    .navigation {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .logo {
+        width: 73px;
+        height: 71px;
+        display: inline-block;
+        margin-right: 35px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .nav, .login {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            font-size: 20px;
+            color: $theme-blue;
+        }
+        a {
+            color: $theme-blue;
+            text-decoration: none;
+            font-size: 23px;
+            cursor: pointer;
+            &:hover {
+             color: $theme-dark-blue;
+            }
+        }
+     }
+
+     #alt-a {
+        display: none;
+     }
+
+     .country-flag span {
+         margin-right: 10px;
+     }
+
+     .nav {
+        top: 39px;
+        li {
+            font-weight: bold;
+        }         
+     }
+
+     .login a {
+         text-transform: uppercase;
+         font-size: 18px;
+         color: $black;
+     }
+}
+//Nav on mobile
+@include mq(499px) {
+    .navigation {
+        padding: 20px 0 40px;
+    }
+    .logo {
+        width: 55px;
+    }
+    .nav {
+        top: 70px;
+        a {
+            font-size: 17px;
+        }
+    }
+    .login a {
+        font-size: 16px;
+    }
+}
+
+//Hero...
+.hero {
+    width: 100%;
+    height: 550px;
+    display: inline-block;
+    overflow-x: hidden;
+    position: relative;
+    .slide {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @include mq(640px) {
+        height: 378px;
+    }
+}
+
+.cta {
+    position: absolute;
+    width: 400px;
+    top: 168px;
+    left: 108px;
+    h1 {
+        color: $white;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 0.9;
+        @include mq(640px) {
+            font-size: 35px;
+        }
+    }
+    span {
+        display: block;
+        color: $white;
+        font-size: 24px;
+        @include mq(640px) {
+            font-size: 17px;
+            margin-top: 10px;
+        }
+    }
+    @include mq(1280px) {
+        left: 5%;
+    }
+    @include mq(640px) {
+        top: 65px;
+        left: 5%;
+        width: 320px;
+    }
+}
+
+.btn-cta {
+    width: 180px;
+    height: 60px;
+    color: $white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    background: $theme-blue;
+    margin-top: 20px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        border: 15px solid $light-blue;
+        background: $light-blue;
+        transition: border 300ms ease-in-out, background 400ms ease-in-out, color 450ms ease-in-out, box-shadow 1s;
+        box-shadow: 10px 10px 20px rgba($black, 0.6);
+        color: $theme-dark-blue;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        box-shadow: 5px 5px 15px rgba($black, 0.4);
+        transform: scale(0.9);
+        transform: skew(-6deg);
+        transition: box-shadow 100ms ease-in-out;
+    }
+}
+
+.slider-nav-buttons {
+    position: absolute;
+    top: 241px;
+    right: 0;
+    @include mq(1280px) {
+        right: 5%;
+    }
+    @include mq(640px) {
+        top: 307px;
+    }
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: 1px solid rgba($grey, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        border: 3px solid rgba($light-blue, 0.8);
+    }
+    &:active {
+        border: 3px solid rgba($grey, 1);
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+
+.left {
+    margin-right: 14px;
+}

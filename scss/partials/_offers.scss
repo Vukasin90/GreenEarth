@@ -1,0 +1,147 @@
+.offers {
+    background-color: $theme-blue;
+    padding: 24px 0 39px 0;
+    h6 {
+        font-size: 20px;
+        color: $white;
+        font-weight: normal;
+    }
+}
+
+.wrap {
+    width: 1043px;
+    margin: 25px auto;
+    @include mq(1160px) {
+        width: 100%;
+    }
+    @include mq(740px) {
+        width: 100%;
+    }
+}
+
+.offers-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    justify-content: space-around;
+    @include mq(1100px) {
+        justify-content: center;
+    }
+}
+
+.card-offers {
+    display: inline-block;
+    background: $white;
+    width: 240px;
+    padding-bottom: 21px;
+    span {
+        display: block;
+        margin-left: 30px;
+    }
+    a {
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bold;
+        color: $theme-blue;
+        margin: 11px 0 0 30px;
+        display: inline-block;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @include mq(1100px) {
+        width: 340px;
+    }
+    &:nth-child(even) {
+      @include mq(1100px) {
+            margin: 0 0px 20px 5px;
+      }  
+    }
+    &:nth-child(odd) {
+        @include mq(1100px) {
+            margin: 0 5px 20px 0px;
+        }  
+    }
+    &:nth-child(even) {
+        @include mq(767px) {
+            margin: 0 0px 40px 0px;
+        }  
+    }
+    &:nth-child(odd) {
+        @include mq(767px) {
+            margin: 0 0px 40px 0px;
+        }  
+    }
+    @include mq(767px) {
+        margin: 20px auto;
+        width: 100%;
+    }
+}
+
+.card-offers img {
+    width: 100%;
+}
+
+.city-offer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: $theme-dark-blue;
+}
+
+.price-offer {
+    font-size: 20px;
+    font-weight: normal;
+    color: $theme-dark-blue;
+}
+
+span.book-now-arrow {
+    display: inline-block;
+    margin: 0;
+    svg {
+        width: 100%;
+    }
+}
+
+.london {
+    position: relative;
+}
+
+.offer-label {
+    position: absolute;
+    background: #ffed28;
+    width: 200px;
+    height: 30px;
+    padding-left: 15px;
+    line-height: 30px;
+    color: $theme-blue;
+    font-weight: bold;
+    font-size: 20px;
+    top: 20px;
+    left: -10px;
+}
+
+#label-fold {
+    @include arrow-right(8px, #b3a61d);
+    margin: 0;
+    transform: rotate(-44deg) translate(-4px, -11px);
+}
+
+.inspiration {
+   padding: 40px 10px;
+   h3 {
+       font-size: 32px;
+       color: $theme-blue;
+       text-align: center;
+       font-weight: normal;
+       & a {
+           font-weight: bold;
+           border-bottom: 3px dashed $theme-blue;
+           text-decoration: none;
+           color: $theme-blue;
+       }
+       @include mq(662px) {
+           font-size: 24px;
+       }
+   }
+}
